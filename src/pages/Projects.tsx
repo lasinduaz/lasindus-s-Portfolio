@@ -48,7 +48,7 @@ const Projects = () => {
             <p className="text-sm text-muted-foreground">
               <span className="text-primary">$</span> More projects available on{" "}
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/lasinduaz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-secondary hover:underline"
