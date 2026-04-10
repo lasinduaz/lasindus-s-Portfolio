@@ -4,6 +4,7 @@ interface TerminalLine {
   type: "command" | "output" | "prompt";
   text: string;
   delay?: number;
+  className?: string;
 }
 
 interface TerminalAnimationProps {
@@ -17,7 +18,11 @@ export const TerminalAnimation = ({
   onComplete,
   typingSpeed = 50,
 }: TerminalAnimationProps) => {
-  const [displayedLines, setDisplayedLines] = useState<{ text: string; type: string }[]>([]);
+  const [displayedLines, setDisplayedLines] = useState<{
+    text: string;
+    type: string;
+    className?: string;
+  }[]>([]);
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -32,7 +37,9 @@ export const TerminalAnimation = ({
   useEffect(() => {
     // If reduced motion is preferred, show all content immediately
     if (prefersReducedMotion) {
-      setDisplayedLines(lines.map((line) => ({ text: line.text, type: line.type })));
+      setDisplayedLines(
+        lines.map((line) => ({ text: line.text, type: line.type, className: line.className })),
+      );
       setIsTyping(false);
       onComplete?.();
       return;
@@ -58,7 +65,7 @@ export const TerminalAnimation = ({
     if (currentLine.type === "output") {
       setDisplayedLines((prev) => [
         ...prev,
-        { text: currentLine.text, type: currentLine.type },
+        { text: currentLine.text, type: currentLine.type, className: currentLine.className },
       ]);
       setCurrentLineIndex((prev) => prev + 1);
       setCurrentCharIndex(0);
@@ -137,7 +144,11 @@ export const TerminalAnimation = ({
               </span>
             )}
             {line.type === "output" && (
-              <span className="text-muted-foreground">{line.text}</span>
+              <span
+                className={`text-muted-foreground whitespace-pre-wrap break-words ${line.className ?? ""}`}
+              >
+                {line.text}
+              </span>
             )}
             {line.type === "prompt" && (
               <span className="text-primary glow-text">{line.text}</span>

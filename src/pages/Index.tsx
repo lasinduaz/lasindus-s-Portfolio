@@ -8,16 +8,17 @@ import { useState } from "react";
 
 const terminalLines = [
   { type: "command" as const, text: "whoami" },
-  { type: "output" as const, text: "DevOps Engineer | System Architect | Automation Enthusiast", delay: 200 },
+  {
+    type: "output" as const,
+    text: "DevOps Engineer",
+    delay: 200,
+    className: "text-foreground font-semibold tracking-tight glow-text",
+  },
   { type: "command" as const, text: "cat intro.txt", delay: 400 },
-  { type: "output" as const, text: "", delay: 100 },
-  { type: "prompt" as const, text: "Building reliable systems, one pipeline at a time.", delay: 100 },
-  { type: "output" as const, text: "", delay: 100 },
-  { type: "output" as const, text: "I automate everything, design for failure, and scale by default.", delay: 100 },
-  { type: "output" as const, text: "", delay: 100 },
+  { type: "output" as const, text: "> Building systems that don't break.", delay: 100 },
+  { type: "output" as const, text: "> Automating what humans shouldn't repeat.", delay: 100 },
+  { type: "output" as const, text: "> Scaling without limits.", delay: 100 },
   { type: "command" as const, text: "ls ./portfolio", delay: 600 },
-  { type: "output" as const, text: "projects/  skills/  about.md  contact.md  resume.pdf", delay: 200 },
-  { type: "command" as const, text: "_", delay: 400 },
 ];
 
 const Index = () => {
