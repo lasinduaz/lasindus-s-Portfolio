@@ -22,8 +22,6 @@ export const projectsData: Project[] = [
     outcome: "Reduced admin task completion time by 40% and improved user satisfaction through simplified interfaces.",
     technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
     featured: true,
-    link: "#",
-    github: "#",
   },
   {
     id: "task-manager",

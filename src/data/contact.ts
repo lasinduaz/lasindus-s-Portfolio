@@ -19,7 +19,7 @@ export const contactData: ContactData = {
   links: [
     {
       name: "Email",
-      url: "lasinduaz@gmail.com",
+      url: "mailto:lasinduaz@gmail.com",
       icon: "mail",
       displayValue: "lasinduaz@gmail.com",
       copyable: true,

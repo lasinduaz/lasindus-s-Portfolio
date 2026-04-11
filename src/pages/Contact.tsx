@@ -12,20 +12,18 @@ const iconMap = {
 };
 
 const Contact = () => {
-  const [copied, setCopied] = useState(false);
+  const [copiedLinkName, setCopiedLinkName] = useState<string | null>(null);
 
-  const handleCopy = async (text: string) => {
+  const handleCopy = async (linkName: string, text: string) => {
     try {
       await navigator.clipboard.writeText(text);
-      setCopied(true);
+      setCopiedLinkName(linkName);
       toast.success("Copied to clipboard!");
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopiedLinkName(null), 2000);
     } catch (err) {
       toast.error("Failed to copy");
     }
   };
-
-  const emailLink = contactData.links.find((link) => link.name === "Email");
 
   return (
     <Layout>
@@ -78,15 +76,15 @@ const Contact = () => {
                           <Button
                             variant="ghost"
                             size="sm"
-                            onClick={() => handleCopy(link.displayValue)}
+                            onClick={() => handleCopy(link.name, link.displayValue)}
                             className="gap-2"
                           >
-                            {copied ? (
+                            {copiedLinkName === link.name ? (
                               <Check className="w-4 h-4 text-primary" />
                             ) : (
                               <Copy className="w-4 h-4" />
                             )}
-                            {copied ? "Copied" : "Copy"}
+                            {copiedLinkName === link.name ? "Copied" : "Copy"}
                           </Button>
                         )}
                         <Button asChild variant="outline" size="sm">
