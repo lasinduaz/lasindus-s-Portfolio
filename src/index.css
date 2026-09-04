@@ -212,15 +212,47 @@
   }
 
   /* Terminal Window */
-  .terminal-window {
-    @apply bg-[hsl(var(--terminal-bg))] border border-primary/30 rounded-sm;
-    box-shadow: 
-      0 0 20px hsl(var(--primary) / 0.2),
-      inset 0 0 30px hsl(var(--primary) / 0.05);
+  .terminal-kali {
+    background: #131316;
+    border: 1px solid #26262b;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgb(0 0 0 / 60%);
   }
 
   .terminal-header {
-    @apply flex items-center gap-2 px-4 py-2 border-b border-primary/20 bg-primary/5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #1a1a1e;
+    border-bottom: 1px solid #26262b;
+  }
+
+  .terminal-scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: #4ea6f5 #0c0c0e;
+    scrollbar-gutter: stable;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-track {
+    background: #0c0c0e;
+    border-left: 1px solid #26262b;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb {
+    min-height: 48px;
+    background: #4ea6f5;
+    border: 3px solid #0c0c0e;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgb(78 166 245 / 45%);
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #6db8fa;
   }
 
   .terminal-dot {
