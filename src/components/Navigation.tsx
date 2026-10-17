@@ -41,8 +41,10 @@ export const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-primary"
+            className="nav-menu-button md:hidden p-2 text-primary"
             aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -50,7 +52,7 @@ export const Navigation = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-primary/20">
+          <div id="mobile-navigation" className="md:hidden py-4 border-t border-primary/20">
             {navItems.map((item) => (
               <Link
                 key={item.path}

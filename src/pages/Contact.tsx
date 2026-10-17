@@ -37,7 +37,7 @@ const Contact = () => {
               <div><span>└─</span><b>$</b> cat contact.md<i /></div>
             </div>
 
-            <h1 className="contact-page-title"><span>//</span>{contactData.headline}</h1>
+            <h1 className="contact-page-title">{contactData.headline}</h1>
             <p className="contact-page-sub">{contactData.subheadline}</p>
 
             <div className="contact-channels">

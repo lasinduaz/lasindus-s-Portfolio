@@ -10,8 +10,6 @@ const Projects = () => {
           <span className="projects-user">lasindu@lasinduspc</span>:<span className="projects-path">~/projects</span>$ <span className="projects-command-text">ls -la</span>
         </div>
 
-        <h1 className="projects-title"><span>//</span>Projects</h1>
-
         <div className="projects-terminal-stack">
           {projectsData.map((project, index) => (
             <details key={project.id} className="project-terminal" open={index === 0}>
