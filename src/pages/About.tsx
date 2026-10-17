@@ -17,7 +17,7 @@ const About = () => (
           </div>
           <article className="about-glow">
             <h1>Lasindu Samarajeewa</h1>
-            <h2>Software Engineer</h2>
+            <h2>DevOps Engineer</h2>
             <p>I build software, understand the systems behind it, and continuously look for better ways to engineer it.</p>
             <p>My focus is software engineering with a strong edge in <strong>DevOps, cloud, automation, and system architecture</strong> — connecting development with the infrastructure that makes software reliable in the real world.</p>
             <p>I’m driven by difficult problems, strong engineering principles, and the process of turning ideas into systems that work.</p>

@@ -22,7 +22,7 @@ const terminalLines: TerminalLine[] = [
   { type: "command", user: "root", path: "~", root: true, text: "whoami", delay: 150 },
   { type: "output", text: "Lasindu Samarajeewa", delay: 400 },
   { type: "command", user: "root", path: "~", root: true, text: "systemctl status lasindu", delay: 200 },
-  { type: "output", text: "● lasindu.service - Software Engineer", delay: 60 },
+  { type: "output", text: "● lasindu.service - DevOps Engineer", delay: 60 },
   { type: "output", text: "     Loaded: loaded (/etc/systemd/system/lasindu.service)", delay: 60 },
   { type: "output", text: "     Active: active (running)", delay: 60 },
   { type: "output", text: "     Tasks: building system", delay: 60 },

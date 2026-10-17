@@ -1,4 +1,4 @@
-# 💻 Lasindu Perera | DevOps Portfolio
+# 💻 Lasindu Samarajeewa | DevOps Portfolio
 
 ![Status](https://img.shields.io/badge/status-live-00ff41?style=flat-square&logo=vercel)
 ![Built With](https://img.shields.io/badge/built_with-React_%2B_TypeScript-0a0a0a?style=flat-square&logo=react)

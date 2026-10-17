@@ -19,7 +19,7 @@ export interface AboutData {
 }
 
 export const aboutData: AboutData = {
-  name: "Lasindu Anjana",
+  name: "Lasindu Samarajeewa",
   role: "DevOps Engineer",
   tagline: "Building reliable systems, one pipeline at a time.",
   bio: [

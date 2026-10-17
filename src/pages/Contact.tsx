@@ -37,9 +37,6 @@ const Contact = () => {
               <div><span>└─</span><b>$</b> cat contact.md<i /></div>
             </div>
 
-            <h1 className="contact-page-title">{contactData.headline}</h1>
-            <p className="contact-page-sub">{contactData.subheadline}</p>
-
             <div className="contact-channels">
               {contactData.links.map((link) => {
                 const Icon = channelIcons[link.icon as keyof typeof channelIcons] || Mail;
@@ -70,10 +67,6 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="contact-terminal-footer">
-              <div><span>$</span> echo "Looking forward to connecting!"</div>
-              <div><b>→</b> Looking forward to connecting!</div>
-            </div>
           </div>
         </div>
       </section>
